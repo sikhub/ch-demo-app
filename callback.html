@@ -16,7 +16,6 @@
 
     $(document).ready(function() {
         const code = getParameterByName('code');
-        const accessToken = localStorage.getItem('access_token');
 
         const data = {
             'grant_type': 'authorization_code',
@@ -27,7 +26,8 @@
         }
 
         $.post('https://api.partners.dev.carthook.com/oauth/token', data, function(data) {
-            console.log(data);
+            localStorage.setItem('access_token', data.access_token);
+            window.location.href = 'https://sikhub.github.io/ch-demo-app';
         });
 
     });
