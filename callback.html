@@ -19,11 +19,11 @@
         const accessToken = localStorage.getItem('access_token');
 
         const data = {
-            grant_type: 'authorization_code',
-            client_id: '0fc815131034a251ec06954636781a2b',
-            client_secret: 'cwrD1n1qwpifbPv7RlC9j4iP0yanD0u5XSYFLERo',
-            redirect_uri: 'https://localhost:3000/callback',
-            code: code
+            'grant_type': 'authorization_code',
+            'client_id': '0fc815131034a251ec06954636781a2b',
+            'client_secret': 'cwrD1n1qwpifbPv7RlC9j4iP0yanD0u5XSYFLERo',
+            'redirect_uri': 'https://sikhub.github.io/ch-demo-app/callback',
+            'code': code
         }
 
         $.post('https://api.partners.dev.carthook.com/oauth/token', data, function(data) {
