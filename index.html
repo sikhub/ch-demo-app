@@ -38,7 +38,7 @@
                 },
                 success: function(data) {
                     console.log(data);
-                    $content.html('<pre>' + data);
+                    $content.html('<pre>' + JSON.stringify(data, null, 2));
                 }
             });
         });
